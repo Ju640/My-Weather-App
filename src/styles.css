@@ -1,0 +1,131 @@
+body {
+  font-family: "Ubuntu", sans-serif;
+  margin-top: 50px;
+}
+.weatherApp {
+  background-color: #f6f6f6;
+  border: 2px solid #8785a2;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 0px auto;
+  max-width: 550px;
+}
+
+.currentTime {
+  color: #8785a2;
+  font-size: 20px;
+  font-weight: 600;
+}
+.searchCity {
+  border: 2px solid #8785a2;
+  border-radius: 10px;
+  height: 41px;
+  color: #8785a2;
+  font-weight: 600;
+  width: 170px;
+}
+.searchButton {
+  text-align: center;
+  border: 2px solid #8785a2;
+  border-radius: 10px;
+  width: 40px;
+  height: 40px;
+  font-size: 18px;
+  color: #8785a2;
+  background-color: #ffe2e2;
+  transition: all 200ms ease-in-out;
+}
+.searchButton:hover {
+  color: #f6f6f6;
+  background-color: #8785a2;
+  cursor: pointer;
+}
+.currentLocation {
+  margin-top: 3px;
+  text-align: center;
+  border: 2px solid #8785a2;
+  border-radius: 10px;
+  height: 30px;
+  width: 170px;
+  font-size: 15px;
+  color: #8785a2;
+  background-color: #ffe2e2;
+  transition: all 200ms ease-in-out;
+}
+.currentLocation:hover {
+  color: #f6f6f6;
+  background-color: #8785a2;
+  cursor: pointer;
+}
+.cityName {
+  margin-top: 10px;
+  text-align: center;
+  color: #8785a2;
+  font-size: 60px;
+  font-weight: 600;
+}
+.date-today {
+  text-align: center;
+  margin: 0;
+  color: #ffe2e2;
+  font-size: 25px;
+  font-weight: 800;
+  text-shadow: -1px 0 #8785a2, 0 1px #8785a2, 1px 0 #8785a2, 0 -1px #8785a2;
+}
+.rowGrouping {
+  margin: 20px 0;
+}
+.mainWeatherEmoji {
+  text-align: center;
+  font-size: 80px;
+  color: #8785a2;
+}
+.temperature-today {
+  font-size: 65px;
+  text-align: center;
+  color: #ffc7c7;
+  font-weight: 600;
+}
+.temperatureLinks {
+  font-size: 15px;
+}
+.celcius {
+  color: #8785a2;
+}
+.fahrenheit {
+  color: #8785a2;
+}
+.weatherDetails {
+  margin-top: 0;
+  color: #8785a2;
+  font-size: 15px;
+  text-align: center;
+}
+.today-specifications {
+  margin-bottom: 0;
+  text-align: center;
+  font-size: 25px;
+  color: #8785a2;
+  font-weight: 600;
+}
+.card2 {
+  background-color: #ffe2e2;
+  border: 2px solid #8785a2;
+  border-radius: 10px;
+}
+.forecastList {
+  text-align: center;
+  color: #8785a2;
+  font-size: 20px;
+}
+.dayName {
+  font-weight: 600;
+}
+.forecastEmoji {
+  font-size: 35px;
+  margin: 18px 0;
+  color: #8785a2;
+}
+.forecastLowTemp {
+  font-size: 15px;
+}
