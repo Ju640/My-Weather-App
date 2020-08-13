@@ -75,8 +75,9 @@ function formatDate(timestamp) {
 
 function showTemperature(response) {
   document.querySelector("#citySearched").innerHTML = response.data.name;
+  celsiusTemperature = response.data.main.temp;
   document.querySelector("#tempToday").innerHTML = Math.round(
-    response.data.main.temp
+    celsiusTemperature
   );
   document.querySelector("#today-specifications").innerHTML =
     response.data.weather[0].description;
@@ -155,6 +156,32 @@ function currentLocationWeather(response) {
   humidityElement.innerHTML = `${humidity}`;
   windElement.innerHTML = `${wind}`;
 }
+
+function displayFahrenheit(event) {
+  event.preventDefault();
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  document.querySelector("#tempToday").innerHTML = Math.round(
+    fahrenheitTemperature
+  );
+}
+
+function displayCelsius(event) {
+  event.preventDefault();
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+  let temperatureElement = document.querySelector("#tempToday");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
+
+let celsiusTemperature = null;
+
+let fahrenheitLink = document.querySelector("#fahrenheitLink");
+fahrenheitLink.addEventListener("click", displayFahrenheit);
+
+let celsiusLink = document.querySelector("#celsiusLink");
+celsiusLink.addEventListener("click", displayCelsius);
 
 let form = document.querySelector("#searchbar");
 form.addEventListener("submit", search);

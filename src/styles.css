@@ -65,10 +65,23 @@ body {
   color: #8785a2;
 }
 .temperature-today {
-  font-size: 65px;
+  font-size: 85px;
   text-align: center;
   color: #ffc7c7;
   font-weight: 600;
+}
+.units {
+  position: relative;
+  bottom: 48px;
+  font-size: 15px;
+}
+.units .active {
+  color: #ffc7c7;
+  cursor: default;
+}
+
+.units .active:hover {
+  text-decoration: none;
 }
 .temperatureLinks {
   font-size: 15px;
@@ -91,6 +104,7 @@ body {
   font-size: 25px;
   color: #8785a2;
   font-weight: 600;
+  text-transform: capitalize;
 }
 .card2 {
   background-color: #ffe2e2;
