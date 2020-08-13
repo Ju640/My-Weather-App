@@ -113,11 +113,22 @@ body {
   border: 2px solid #8785a2;
   border-radius: 10px;
 }
-.forecastList {
-  text-align: center;
-  color: #8785a2;
-  font-size: 20px;
+.forecastCol {
+  padding: 0;
 }
+.forecastList {
+  margin: 0 auto;
+  color: #8785a2;
+  text-align: center;
+}
+.forecastTime {
+  font-size: larger;
+}
+.forecastImage {
+  text-align: center;
+  width: 75px;
+}
+
 .dayName {
   font-weight: 600;
 }
