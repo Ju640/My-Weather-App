@@ -1,5 +1,5 @@
-function formatTime(time) {
-  let date = new Date(time);
+function formatTime(timestamp) {
+  let date = new Date(timestamp);
   let hours = date.getHours();
   if (hours < 10) {
     hours = `0${hours}`;
@@ -16,7 +16,8 @@ let currentTime = new Date();
 let timeElement = document.querySelector("#time");
 timeElement.innerHTML = formatTime(currentTime);
 
-function formatDate(date) {
+function formatDate(timestamp) {
+  let currentDate = new Date(timestamp);
   let dates = [
     "0",
     "1st",
@@ -67,12 +68,10 @@ function formatDate(date) {
     "December",
   ];
 
-  let todaysDay = dates[date.getDate()];
-  let month = months[date.getMonth()];
+  let todaysDay = dates[currentDate.getDate()];
+  let month = months[currentDate.getMonth()];
   return `Today - ${month} ${todaysDay}`;
 }
-let todaysDate = document.querySelector("#date");
-todaysDate.innerHTML = formatDate(currentTime);
 
 function showTemperature(response) {
   document.querySelector("#citySearched").innerHTML = response.data.name;
@@ -83,6 +82,9 @@ function showTemperature(response) {
     response.data.weather[0].description;
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
   document.querySelector("#wind").innerHTML = response.data.wind.speed;
+  document.querySelector("#date").innerHTML = formatDate(
+    response.data.dt * 1000
+  );
 }
 
 function displayForecast(response) {
