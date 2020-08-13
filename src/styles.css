@@ -40,23 +40,7 @@ body {
   background-color: #8785a2;
   cursor: pointer;
 }
-.currentLocation {
-  margin-top: 3px;
-  text-align: center;
-  border: 2px solid #8785a2;
-  border-radius: 10px;
-  height: 30px;
-  width: 170px;
-  font-size: 15px;
-  color: #8785a2;
-  background-color: #ffe2e2;
-  transition: all 200ms ease-in-out;
-}
-.currentLocation:hover {
-  color: #f6f6f6;
-  background-color: #8785a2;
-  cursor: pointer;
-}
+
 .cityName {
   margin-top: 10px;
   text-align: center;

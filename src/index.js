@@ -129,7 +129,6 @@ function search(event) {
 }
 
 function currentLocationWeather(response) {
-  console.log(response);
   let currentTemperature = document.querySelector("#tempToday");
   let currentCity = document.querySelector("#citySearched");
   let temperature = Math.round(response.data.main.temp);
@@ -148,20 +147,6 @@ function currentLocationWeather(response) {
   humidityElement.innerHTML = `${humidity}`;
   windElement.innerHTML = `${wind}`;
 }
-
-function retrievePosition(position) {
-  let apiKey = "5f472b7acba333cd8a035ea85a0d4d4c";
-  let lat = position.coords.latitude;
-  let lon = position.coords.longitude;
-  let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
-  axios.get(url).then(currentLocationWeather);
-}
-function getCurrentPosition() {
-  navigator.geolocation.getCurrentPosition(retrievePosition);
-}
-
-let currentLocationButton = document.querySelector("#currentLocation");
-currentLocationButton.addEventListener("click", getCurrentPosition);
 
 let form = document.querySelector("#searchbar");
 form.addEventListener("submit", search);
